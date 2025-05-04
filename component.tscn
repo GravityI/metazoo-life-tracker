@@ -1,0 +1,231 @@
+[gd_scene load_steps=25 format=3 uid="uid://bc33bl6bwe5no"]
+
+[ext_resource type="Script" uid="uid://ddjq7rqa0bmon" path="res://component.gd" id="1_cyri3"]
+[ext_resource type="Texture2D" uid="uid://c4wn1gpt6dxhf" path="res://images/Archive.png" id="1_vwh44"]
+[ext_resource type="Texture2D" uid="uid://cpqojan6lg8yf" path="res://images/pawn.png" id="3_tmkhj"]
+[ext_resource type="Texture2D" uid="uid://b1d137u2yn0q6" path="res://images/Aria.png" id="4_vek5i"]
+[ext_resource type="Texture2D" uid="uid://d4dgvj7aaufi4" path="res://images/Brigitte.png" id="5_tnwen"]
+[ext_resource type="Texture2D" uid="uid://dxjypcsey7cfv" path="res://images/Javier.png" id="6_bomqn"]
+[ext_resource type="Texture2D" uid="uid://brkxronuq8xbv" path="res://images/Maeve.png" id="7_i05h4"]
+[ext_resource type="Texture2D" uid="uid://dkb2j5e37t25c" path="res://images/Malik.png" id="8_dhcv3"]
+[ext_resource type="Texture2D" uid="uid://dyaoixcl4bjug" path="res://images/Wei.png" id="9_xrogl"]
+[ext_resource type="Texture2D" uid="uid://dyi45dq82k3q0" path="res://images/Nia.png" id="10_70jwx"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7dm0k"]
+font_size = 128
+outline_size = 20
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fcgw2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vwh44"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cyri3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tmkhj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5sa4g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_76qsh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g8mv1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7ve78"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aniq5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iyht3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vek5i"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tmkhj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tnwen"]
+
+[node name="Component" type="Control"]
+layout_mode = 3
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_cyri3")
+CasterTextures = Array[Texture]([ExtResource("1_vwh44"), ExtResource("4_vek5i"), ExtResource("5_tnwen"), ExtResource("6_bomqn"), ExtResource("7_i05h4"), ExtResource("8_dhcv3"), ExtResource("9_xrogl"), ExtResource("10_70jwx")])
+
+[node name="CasterImage" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_vwh44")
+
+[node name="MissionPoints" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -87.5
+offset_bottom = 87.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+text = "0"
+label_settings = SubResource("LabelSettings_7dm0k")
+horizontal_alignment = 1
+
+[node name="Increase" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_right = -3.0
+offset_bottom = -3.0
+theme_override_colors/font_hover_color = Color(0, 1, 0, 0.392157)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.392157)
+theme_override_colors/font_color = Color(0, 1, 0, 0.490196)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 64
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fcgw2")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_vwh44")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_cyri3")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_tmkhj")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_5sa4g")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_76qsh")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g8mv1")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_7ve78")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_aniq5")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_iyht3")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_vek5i")
+text = "+"
+flat = true
+
+[node name="Decrease" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -3.0
+offset_bottom = -3.0
+theme_override_colors/font_hover_color = Color(1, 0, 0, 0.392157)
+theme_override_colors/font_outline_color = Color(0.188235, 0.188235, 0.188235, 0.392157)
+theme_override_colors/font_color = Color(1, 0, 0, 0.490196)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 64
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fcgw2")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_vwh44")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_cyri3")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_tmkhj")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_5sa4g")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_76qsh")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g8mv1")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_tmkhj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_tmkhj")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_iyht3")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_tnwen")
+text = "-"
+flat = true
+
+[node name="ChangeCaster" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+scale = Vector2(0.4, 0.4)
+icon = ExtResource("3_tmkhj")
+flat = true
+
+[node name="CasterPanel" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="CasterPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 4
+
+[node name="TextureButton" type="TextureButton" parent="CasterPanel/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("1_vwh44")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextureButton2" type="TextureButton" parent="CasterPanel/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("4_vek5i")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextureButton3" type="TextureButton" parent="CasterPanel/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("5_tnwen")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextureButton4" type="TextureButton" parent="CasterPanel/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("6_bomqn")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextureButton8" type="TextureButton" parent="CasterPanel/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("7_i05h4")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextureButton5" type="TextureButton" parent="CasterPanel/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("8_dhcv3")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextureButton7" type="TextureButton" parent="CasterPanel/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("9_xrogl")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextureButton6" type="TextureButton" parent="CasterPanel/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("10_70jwx")
+ignore_texture_size = true
+stretch_mode = 5
+
+[connection signal="button_down" from="Increase" to="." method="_on_increase_pressed"]
+[connection signal="button_down" from="Decrease" to="." method="_on_decrease_pressed"]
+[connection signal="button_down" from="ChangeCaster" to="." method="_on_change_caster_button_down"]
+[connection signal="button_down" from="CasterPanel/GridContainer/TextureButton" to="." method="set_caster" binds= [0]]
+[connection signal="button_down" from="CasterPanel/GridContainer/TextureButton2" to="." method="set_caster" binds= [1]]
+[connection signal="button_down" from="CasterPanel/GridContainer/TextureButton3" to="." method="set_caster" binds= [2]]
+[connection signal="button_down" from="CasterPanel/GridContainer/TextureButton4" to="." method="set_caster" binds= [3]]
+[connection signal="button_down" from="CasterPanel/GridContainer/TextureButton8" to="." method="set_caster" binds= [4]]
+[connection signal="button_down" from="CasterPanel/GridContainer/TextureButton5" to="." method="set_caster" binds= [5]]
+[connection signal="button_down" from="CasterPanel/GridContainer/TextureButton7" to="." method="set_caster" binds= [6]]
+[connection signal="button_down" from="CasterPanel/GridContainer/TextureButton6" to="." method="set_caster" binds= [7]]

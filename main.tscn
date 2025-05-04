@@ -1,0 +1,89 @@
+[gd_scene load_steps=15 format=3 uid="uid://dge03s4yhi6ge"]
+
+[ext_resource type="PackedScene" uid="uid://bc33bl6bwe5no" path="res://component.tscn" id="1_ig7tw"]
+[ext_resource type="Texture2D" uid="uid://da1xqh1tjxaxc" path="res://images/return.png" id="2_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://d4dgvj7aaufi4" path="res://images/Brigitte.png" id="2_h2yge"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0xm2m"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h2yge"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1bvp3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lquwl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7mycd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_272bh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5vw27"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kek77"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dg77c"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4c57u"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_efxa6"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Component" parent="." instance=ExtResource("1_ig7tw")]
+layout_mode = 1
+
+[node name="Component2" parent="." instance=ExtResource("1_ig7tw")]
+layout_mode = 1
+anchor_left = 0.5
+anchor_right = 1.0
+
+[node name="CasterImage" parent="Component2" index="0"]
+texture = ExtResource("2_h2yge")
+
+[node name="ChangeCaster" parent="Component2" index="4"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -55.0
+offset_right = 81.0
+offset_bottom = 136.0
+grow_horizontal = 0
+
+[node name="ResetButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -54.0
+offset_right = 54.0
+offset_bottom = 108.0
+grow_horizontal = 2
+scale = Vector2(0.5, 0.5)
+pivot_offset = Vector2(54, 0)
+theme_override_colors/icon_pressed_color = Color(0.273873, 0.273873, 0.273873, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0xm2m")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_h2yge")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_1bvp3")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_lquwl")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_7mycd")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_272bh")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_5vw27")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_kek77")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_dg77c")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_4c57u")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_efxa6")
+icon = ExtResource("2_0xm2m")
+icon_alignment = 1
+expand_icon = true
+
+[connection signal="button_down" from="ResetButton" to="Component" method="reset_mission_points"]
+[connection signal="button_down" from="ResetButton" to="Component2" method="reset_mission_points"]
+
+[editable path="Component2"]
